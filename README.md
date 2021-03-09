@@ -41,7 +41,7 @@ React-native kakao-maps module for Android
 ***
 
 ## 맵 마커 클러스터링
-+ 클러스터링 화면   
++ 클러스터링 화면 (완성 화면)  
 ![3_clustering](https://user-images.githubusercontent.com/25360777/110412149-0e36f380-80cf-11eb-86f3-c1dd9c0a68ff.gif)   
 - K-Means 알고리즘을 적용하여 개발
 - 화면의 중점이나, 확대/축소값이 변경 되었을 경우 처리가 되도록 개발
@@ -51,7 +51,7 @@ React-native kakao-maps module for Android
 - 문제점 2: 마커 선택시 기본마커와 말풍선으로 변경됨
 - 해결 2: Time solves
 
-+ 클러스터링 알고리즘   
++ 클러스터링 알고리즘 (개발중 테스트 화면)  
 ![3-1_boundary_algorithum](https://user-images.githubusercontent.com/25360777/110412157-11ca7a80-80cf-11eb-9b99-a3d6679704ff.gif)   
 - 화면상의 5점의 무게중심(Centroid)을 선택하여 중심과 가까운 마커들의 좌표끼리 군집화 처리
 - 문제점 : 중점과 상대적 먼거리에 마커들이 모여 있을 경우 무게중심과 큰 차이가 발생.
