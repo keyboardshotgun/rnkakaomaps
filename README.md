@@ -9,7 +9,7 @@ React-native kakao-maps module for Android
   
 - 특징 및 기능  
   + 카카오맵을 React-Native에서 사용하기 위한 모듈
-  + kakao-maps, Android library 사용하여 개발 (DaumMap SDK 1.4.1.0)
+  + DaumMap SDK 1.4.1.0 , 카카오맵 안드로이드 API를 사용하여 개발
   + https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip
   + 클러스터기능 커스텀 개발 (k-means 알고리즘 사용, 효율을 위해 안드로이드단에서 개발)
   + 타입스크립트
