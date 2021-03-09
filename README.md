@@ -5,14 +5,14 @@ React-native kakao-maps module for Android
 - 개발기간
   + 기획 및 API 결정 / UI 디자인 / 이미지 선별 및 수정 / 기본세팅 및 프로젝트 구조, 라이브러리 설치 : 1일
   + 코드작성 : 3일
-  + 테스트 및 리팩토링: 4일
+  + 테스트 및 리팩토링: 3일
   
-- 특징 및 기능
-  + 타입스크립트
+- 특징 및 기능  
   + 카카오맵을 React-Native에서 사용하기 위한 모듈
   + kakao-maps, Android library 사용하여 개발 (DaumMap SDK 1.4.1.0)
   + https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip
   + 클러스터기능 커스텀 개발 (k-means 알고리즘 사용, 효율을 위해 안드로이드단에서 개발)
+  + 타입스크립트
  
 - Project Common Dependencies
 
@@ -29,16 +29,15 @@ React-native kakao-maps module for Android
 ![1_intro](https://user-images.githubusercontent.com/25360777/110412133-07a87c00-80cf-11eb-82d9-72a2712d8ee9.gif)
 - [![DaumMap SDK](https://img.shields.io/badge/DaumMap--SDK-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
 - 성능모니터상 안드로이드 에뮬레이터에서도 쾌적하게 동작
-- 녹화된 영상에서는 깜빡거림 현상이 발생하지만, 실기에서는 발생하지 않음
-- 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 초반 로드가 빠른편이 아니기 떄문에 큰 문제는 없다고 생각. (실기에서는 디바이스 성능에 따라 다를듯)
+- 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 로드가 빠른편이 아니기 때문에 큰 문제는 없다고 생각. (실기에서는 디바이스 성능에 따라 다를듯)
 
 </br></br></br>
 ***
 
 ## 맵스타일 변환
 ![2_change_map_style](https://user-images.githubusercontent.com/25360777/110412143-0bd49980-80cf-11eb-958e-935e88168181.gif)
-- 기상청 API를 사용한 실시간 날씨 정보
-- 
+- sdk에서 제공하는 맵스타일 변화 기능을 리액트 네이티브 단에서 처리
+
 </br></br></br>
 ***
 
@@ -76,7 +75,9 @@ React-native kakao-maps module for Android
 ***
 ## 기타 기능
 ![5_location_change](https://user-images.githubusercontent.com/25360777/110412185-1bec7900-80cf-11eb-93eb-1e2f18ea1573.gif)
+- 리액트네이티브단과 상호작용 이벤트 처리
 - 지정 장소로 위치 이동
+- 중앙값 , 확대/축소 값 공유
    
 </br></br></br>
 ***
@@ -87,6 +88,7 @@ React-native kakao-maps module for Android
 + https://github.com/asata/react-native-daummap
 
 ## 후기 및 계획
++ 딜레이 및 깜빡임 현상은 실기에서는 나타나지 않음.
 + 리액트 네이티브 Socket.io 모듈 개발 이후 오랜만에 네이티브 모듈개발
 + 리액트 네이티브에서 사용하기 위한 맵 모듈 검색 중, 카카오맵 모듈은 없어서 개발.
 + 개발해보니 카카오맵 안드로이드 SDK는 2019년 버젼을 사용하고 있음. (react-native-daummap이 업데이트가 없는 이유인듯)
@@ -96,4 +98,4 @@ React-native kakao-maps module for Android
 - 해결 : build.gradle 빌드시 ndk.abiFilters "armeabi-v7a", "arm64-v8a" 로 제한
 + MapCircle 사용시 에뮬레이터에서는 이미지가 화려하게 깨져보이는 현상 발생 -> 커스텀 마커이미지로 변경
 + 추가기능 구현 검색, 리버싱 변환은 시간날때 적용 예정 (검색은 어차피 API호출이라...)
-+ 다음 프로젝트 선정이 고민.
++ 다음 프로젝트 ???
