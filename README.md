@@ -91,7 +91,7 @@ React-native kakao-maps module for Android
 
 ## 후기 및 계획
 + 딜레이 및 깜빡임 현상은 실기에서는 나타나지 않음.
-+ 리액트 네이티브 Socket.io 모듈 개발 이후 오랜만에 네이티브 모듈개발
++ 리액트 네이티브 Socket.io 모듈 개발 이후 오랜만에 리액트 네이티브 모듈개발.
 + 리액트 네이티브에서 사용하기 위한 맵 모듈 검색 중, 카카오맵 모듈은 없어서 개발.
 + 개발해보니 카카오맵 안드로이드 SDK는 2019년 버젼을 사용하고 있음. (react-native-daummap이 업데이트가 없는 이유인듯)
 + jniLibs 폴더는 android/app/main/src/main/ 에 복붙헤야 함. (공식문서와 다름)
