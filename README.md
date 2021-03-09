@@ -12,7 +12,7 @@ React-native kakao-maps module for Android
   + 카카오맵을 React-Native에서 사용하기 위한 모듈
   + kakao-maps, Android library 사용하여 개발 (DaumMap SDK 1.4.1.0)
   + https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip
-  + 
+  + 클러스터기능 커스텀 개발 (k-means 알고리즘 사용, 효율을 위해 안드로이드단에서 개발)
  
 - Project Common Dependencies
 
@@ -28,8 +28,10 @@ React-native kakao-maps module for Android
 ## 시작 화면
 ![1_intro](https://user-images.githubusercontent.com/25360777/110412133-07a87c00-80cf-11eb-82d9-72a2712d8ee9.gif)
 - [![DaumMap SDK](https://img.shields.io/badge/DaumMap--SDK-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
-- 기상청 API를 사용한 실시간 날씨 정보
-- 
+- 성능모니터상 안드로이드 에뮬레이터에서도 쾌적하게 동작
+- 녹화된 영상에서는 깜빡거림 현상이 발생하지만, 실기에서는 발생하지 않음
+- 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 초반 로드가 빠른편이 아니기 떄문에 큰 문제는 없다고 생각. (실기에서는 디바이스 성능에 따라 다를듯)
+
 </br></br></br>
 ***
 
@@ -41,34 +43,57 @@ React-native kakao-maps module for Android
 ***
 
 ## 맵 마커 클러스터링
-- 클러스터링 화면   
++ 클러스터링 화면   
 ![3_clustering](https://user-images.githubusercontent.com/25360777/110412149-0e36f380-80cf-11eb-86f3-c1dd9c0a68ff.gif)   
+- K-Means 알고리즘을 적용하여 개발
+- 화면의 중점이나, 확대/축소값이 변경 되었을 경우 처리가 되도록 개발
+- 집단의 크기별 마커이미지 차이를 두고, 선택시 몇개의 마커가 존재하는지 표시함.
+-- 문제점 1: 내장 MapCircle 를 활용하여 최적화처리를 시도 하였으나, MapCIrcle이 정상적으로 표시되지 않음, 
+-- 해결 1: png 이미지로 크기별 커스텀 마커를 제작.
+-- 문제점 2: 마커 선택시 기본마커와 말풍선으로 변경됨
+-- 해결 2: Time solves
 
-- 클러스터링 알고리즘   
++ 클러스터링 알고리즘   
 ![3-1_boundary_algorithum](https://user-images.githubusercontent.com/25360777/110412157-11ca7a80-80cf-11eb-9b99-a3d6679704ff.gif)   
+- 화면상의 5점의 무게중심(Centroid)을 선택하여 중심과 가까운 마커들의 좌표끼리 군집화 처리
+-- 문제점 : 중점과 상대적 먼거리에 마커들이 모여 있을 경우 무게중심과 큰 차이가 발생.
+-- 개선 : 바운더리API를 사용하여 현재 화면상의 마커들의 위치들 중에서 랜덤하게 무게중심을 선택하는 것으로 변경.
+- 유클리드 거리 / 맨하튼 거리 둘다 테스트 한 결과 공식의 복잡도에 비해 차이가 크게 없음. 표본수(365개)가 너무 작아서 그런듯
 
-- 상호작용   
++ 상호작용   
 ![3-2_boundary_callout](https://user-images.githubusercontent.com/25360777/110412169-15f69800-80cf-11eb-8e73-a1c80afffc0d.gif)   
+- 몇개의 위치들이 존재하는지 표시
 
-- 기상청 API를 사용한 실시간 날씨 정보
-- 
 </br></br></br>
 ***
 
 ## 맵마커 최적화
 ![4_boundary_loading](https://user-images.githubusercontent.com/25360777/110412175-18f18880-80cf-11eb-9267-59e2acafcb8b.gif)
-
+- getMapPointBounds() + getPOIItems() 조합으로 개발
+- 화면상의 바운더리를 값을 마커 좌표와 비교하여 해당 마커만 표시하도록 처리
+- 
 </br></br></br>
 ***
 ## 기타 기능
 ![5_location_change](https://user-images.githubusercontent.com/25360777/110412185-1bec7900-80cf-11eb-93eb-1e2f18ea1573.gif)
-
+- 지정 장소로 위치 이동
+   
 </br></br></br>
 ***
 
+## 참고문서
++ https://apis.map.kakao.com/android/
++ https://en.wikipedia.org/wiki/K-means_clustering
++ https://github.com/asata/react-native-daummap
+
 ## 후기 및 계획
-- 달력기능 몇개 추가 (년,월 을 직접 선택을 위한 컨텍스트 메뉴 )
-- 자동으로 사용자의 위치정보를 받아서 날씨 정보 업데이트 -> 디바이스 자원소비량 증가 (베터리 및 네트워크 사용량)
-- 개선 : 수동버튼 처리 -> 사용자 동의사항 감소가 추가로 개선
-- React Component 생명주기 개선 및 간단한 코드 리펙토링으로 UI 성능향상.
-- 다음 프로젝트를 위한 분석데이터 준비해야 할듯.
++ 리액트 네이티브 Socket.io 모듈 개발 이후 오랜만에 네이티브 모듈개발
++ 리액트 네이티브에서 사용하기 위한 맵 모듈 검색 중, 카카오맵 모듈은 없어서 개발.
++ 개발해보니 카카오맵 안드로이드 SDK는 2019년 버젼을 사용하고 있음. (react-native-daummap이 업데이트가 없는 이유인듯)
++ jniLibs 폴더는 android/app/main/src/main/ 에 복붙헤야 함. (공식문서와 다름)
++ 안드로이드 에뮬레이터에서 실행시 *.so 라이브러리 찾을 수 없다는 에러발생
+- 원인 : 현재 daumMap SDK는 x86, x64를 지원하지 않음. (실기에서는 동작하는 이유)
+- 해결 : build.gradle 빌드시 ndk.abiFilters "armeabi-v7a", "arm64-v8a" 로 제한
++ MapCircle 사용시 에뮬레이터에서는 이미지가 화려하게 깨져보이는 현상 발생 -> 커스텀 마커이미지로 변경
++ 추가기능 구현 검색, 리버싱 변환은 시간날때 적용 예정 (검색은 어차피 API호출이라...)
++ 다음 프로젝트 선정이 고민.
