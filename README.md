@@ -12,6 +12,7 @@ React-native kakao-maps module for Android
   + DaumMap SDK 1.4.1.0 , 카카오맵 안드로이드 API를 사용하여 개발
   + https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip
   + 클러스터링 기능을 커스텀으로 개발 (k-means 알고리즘 사용, 효율을 위해 안드로이드단에서 개발)
+  + WebView - WebAPI를 사용하여 동작하는 것보다는 원할한 동작 (확대/축소, 핀치, 드래그 등등)
   + 타입스크립트
  
 - Project Common Dependencies
