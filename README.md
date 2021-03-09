@@ -19,7 +19,7 @@ React-native kakao-maps module for Android
   [![React](https://img.shields.io/badge/React-v16.13.1-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/facebook/react)
 [![RN](https://img.shields.io/badge/React--Native-v0.63.4-white?style=fla&labelColor=blue&logoColor=blackt&logo=react)](https://github.com/facebook/react-native)
 [![Typescript](https://img.shields.io/badge/Typescript-v4.1.3-white?style=flat&labelColor=blue&logoColor=black&logo=typescript)](https://github.com/microsoft/TypeScript)
-[![DaumMap SDK](https://img.shields.io/badge/kakaoMaps--Android-SDK-1.4.1.0-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
+[![DaumMap SDK](https://img.shields.io/badge/kakaoMaps--Android--SDK-v1.4.1.0-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
 
 
 </br></br></br>
