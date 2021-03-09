@@ -41,14 +41,14 @@ React-native kakao-maps module for Android
 ***
 
 ## 맵 마커 클러스터링
-- 클러스터링 화면
-![3_clustering](https://user-images.githubusercontent.com/25360777/110412149-0e36f380-80cf-11eb-86f3-c1dd9c0a68ff.gif)
+- 클러스터링 화면   
+![3_clustering](https://user-images.githubusercontent.com/25360777/110412149-0e36f380-80cf-11eb-86f3-c1dd9c0a68ff.gif)   
 
-- 클러스터링 알고리즘
-![3-1_boundary_algorithum](https://user-images.githubusercontent.com/25360777/110412157-11ca7a80-80cf-11eb-9b99-a3d6679704ff.gif)
+- 클러스터링 알고리즘   
+![3-1_boundary_algorithum](https://user-images.githubusercontent.com/25360777/110412157-11ca7a80-80cf-11eb-9b99-a3d6679704ff.gif)   
 
-- 상호작용
-![3-2_boundary_callout](https://user-images.githubusercontent.com/25360777/110412169-15f69800-80cf-11eb-8e73-a1c80afffc0d.gif)
+- 상호작용   
+![3-2_boundary_callout](https://user-images.githubusercontent.com/25360777/110412169-15f69800-80cf-11eb-8e73-a1c80afffc0d.gif)   
 
 - 기상청 API를 사용한 실시간 날씨 정보
 - 
