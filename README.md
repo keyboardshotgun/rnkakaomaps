@@ -28,7 +28,8 @@ React-native kakao-maps module for Android
 ![1_intro](https://user-images.githubusercontent.com/25360777/110412133-07a87c00-80cf-11eb-82d9-72a2712d8ee9.gif)
 - [![DaumMap SDK](https://img.shields.io/badge/DaumMap--SDK-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
 - 성능모니터상 안드로이드 에뮬레이터에서도 쾌적하게 동작
-- 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 로드가 빠른편이 아니기 때문에 큰 문제는 없다고 생각. (실기에서는 디바이스 성능에 따라 다를듯)
+- 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 로드가 빠른편이 아니기 때문에 큰 문제는 없다고 생각. 
+- (실기에서는 디바이스 성능에 따라 다를듯)
 
 </br></br></br>
 ***
@@ -56,7 +57,8 @@ React-native kakao-maps module for Android
 - 화면상의 5점의 무게중심(Centroid)을 선택하여 중심과 가까운 마커들의 좌표끼리 군집화 처리
 - 문제점 : 중점과 상대적 먼거리에 마커들이 모여 있을 경우 무게중심과 큰 차이가 발생.
 - 개선 : 바운더리API를 사용하여 현재 화면상의 마커들의 위치들 중에서 랜덤하게 무게중심을 선택하는 것으로 변경.
-- 유클리드 거리 / 맨하튼 거리 둘다 테스트 한 결과 공식의 복잡도에 비해 차이가 크게 없음. 표본수(365개)가 너무 작아서 그런듯
+- 유클리드 거리 / 맨하튼 거리 알고리즘 둘다 테스트 한 결과, 공식의 복잡도에 비해 차이가 크게 없음. 
+- 표본수(365개)가 너무 작아서 그런듯.
 
 + 상호작용   
 ![3-2_boundary_callout](https://user-images.githubusercontent.com/25360777/110412169-15f69800-80cf-11eb-8e73-a1c80afffc0d.gif)   
