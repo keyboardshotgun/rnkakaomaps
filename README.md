@@ -71,6 +71,7 @@ React-native kakao-maps module for Android
 
 ## 맵마커 최적화
 ![4_boundary_loading](https://user-images.githubusercontent.com/25360777/110412175-18f18880-80cf-11eb-9267-59e2acafcb8b.gif)
+![device_deeplink](https://user-images.githubusercontent.com/25360777/110729163-89c8aa00-8261-11eb-93a1-1a012b2b2bef.gif)
 - getMapPointBounds() + getPOIItems() 조합으로 개발
 - 화면상의 바운더리를 값을 마커 좌표와 비교하여 해당 마커만 표시하도록 처리
 - 일정 조건에서 이전 바운더리 백업을 사용하여 마커 계산 최적화 처리
@@ -82,8 +83,7 @@ React-native kakao-maps module for Android
 - 리액트네이티브단과 상호작용 이벤트 처리
 - 지정 장소로 위치 이동
 - 중앙값 , 확대/축소 값 공유
-- deep link   
- ![device_deeplink](https://user-images.githubusercontent.com/25360777/110729163-89c8aa00-8261-11eb-93a1-1a012b2b2bef.gif)
+- deep link
    
 
 </br></br></br>
