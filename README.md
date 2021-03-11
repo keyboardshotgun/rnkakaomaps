@@ -1,7 +1,8 @@
 # Project Summary
 > rnkakaomaps
 React-native kakao-maps module for Android
-
+- 버전 : 0.0.1
+ 
 - 개발기간
   + 기획 및 API 결정 / UI 디자인 / 이미지 선별 및 수정 / 기본세팅 및 프로젝트 구조, 라이브러리 설치 : 1일
   + 코드작성 : 3일
@@ -12,7 +13,7 @@ React-native kakao-maps module for Android
   + DaumMap SDK 1.4.1.0 , 카카오맵 안드로이드 API를 사용하여 개발
   + https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip
   + 클러스터링 기능을 커스텀으로 개발 (k-means 알고리즘 사용, 효율을 위해 안드로이드단에서 개발)
-  + WebView - WebAPI를 사용하여 동작하는 것보다는 원할한 동작 (확대/축소, 핀치, 드래그 등등)
+  + WebView 사용시 보다 원할한 동작 (확대/축소, 핀치, 드래그 등등)
   + 타입스크립트
  
 - Project Common Dependencies
@@ -72,6 +73,7 @@ React-native kakao-maps module for Android
 ![4_boundary_loading](https://user-images.githubusercontent.com/25360777/110412175-18f18880-80cf-11eb-9267-59e2acafcb8b.gif)
 - getMapPointBounds() + getPOIItems() 조합으로 개발
 - 화면상의 바운더리를 값을 마커 좌표와 비교하여 해당 마커만 표시하도록 처리
+- 일정 조건에서 이전 바운더리 백업을 사용하여 마커 계산 최적화 처리
 
 </br></br></br>
 ***
@@ -80,7 +82,10 @@ React-native kakao-maps module for Android
 - 리액트네이티브단과 상호작용 이벤트 처리
 - 지정 장소로 위치 이동
 - 중앙값 , 확대/축소 값 공유
+- deep link   
+ ![device_deeplink](https://user-images.githubusercontent.com/25360777/110729163-89c8aa00-8261-11eb-93a1-1a012b2b2bef.gif)
    
+
 </br></br></br>
 ***
 
