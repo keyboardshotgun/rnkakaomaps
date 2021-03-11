@@ -63,7 +63,7 @@ React-native kakao-maps module for Android
 
 + 상호작용   
 ![3-2_boundary_callout](https://user-images.githubusercontent.com/25360777/110412169-15f69800-80cf-11eb-8e73-a1c80afffc0d.gif)   
-- 몇개의 위치들이 존재하는지 표시
+- 해당 마커의 위치와 관련된 위치들이 몇개 존재하는지 표시
 
 </br></br></br>
 ***
