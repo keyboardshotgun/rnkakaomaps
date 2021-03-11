@@ -83,7 +83,7 @@ React-native kakao-maps module for Android
 - 리액트네이티브단과 상호작용 이벤트 처리
 - 지정 장소로 위치 이동
 - 중앙값 , 확대/축소 값 공유
-- deep link
+- Deep link 처리, 플레이 스토어 연결, 카카오맵 어플로 "맛집" 검색요청
 
 </br></br></br>
 ***
@@ -94,14 +94,14 @@ React-native kakao-maps module for Android
 + https://github.com/asata/react-native-daummap
 
 ## 후기 및 계획
-+ 딜레이 및 깜빡임 현상은 실기에서는 나타나지 않음.
++ 리액트 네이티브에서 사용하기 위한 맵 모듈 검색 중, 카카오맵 모듈은 없어서 개발시작.
 + 리액트 네이티브 Socket.io 모듈 개발 이후 오랜만에 리액트 네이티브 모듈개발.
-+ 리액트 네이티브에서 사용하기 위한 맵 모듈 검색 중, 카카오맵 모듈은 없어서 개발.
 + 개발해보니 카카오맵 안드로이드 SDK는 2019년 버젼을 사용하고 있음. (react-native-daummap이 업데이트가 없는 이유인듯)
++ 딜레이 및 깜빡임 현상은 실기에서는 나타나지 않음.
 + jniLibs 폴더는 android/app/main/src/main/ 에 복붙헤야 함. (공식문서와 다름)
 + 안드로이드 에뮬레이터에서 실행시 *.so 라이브러리 찾을 수 없다는 에러발생
 - 원인 : 현재 daumMap SDK는 x86, x64를 지원하지 않음. (실기에서는 동작하는 이유)
-- 해결 : build.gradle 빌드시 ndk.abiFilters "armeabi-v7a", "arm64-v8a" 로 제한
+- 해결 : build.gradle -> 빌드시 ndk.abiFilters "armeabi-v7a", "arm64-v8a" 로 제한
 + MapCircle 사용시 에뮬레이터에서는 이미지가 화려하게 깨져보이는 현상 발생 -> 커스텀 마커이미지로 변경
 + 추가기능 구현 검색, 리버싱 변환은 시간날때 적용 예정 (검색은 어차피 API호출이라...)
 + 다음 프로젝트 ???
