@@ -30,7 +30,7 @@ React-native kakao-maps module for Android
 - [![DaumMap SDK](https://img.shields.io/badge/DaumMap--SDK-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://apis.map.kakao.com/download/android/sdk/Android_DaumMap_SDK_1.4.1.0.zip)
 - 성능모니터상 안드로이드 에뮬레이터에서도 쾌적하게 동작
 - 안드로이드 에뮬레이터에서 실행 후 뷰까지 12초, 리액트 네이티브 자체 로드가 빠른편이 아니기 때문에 큰 문제는 없다고 생각. 
-- (실기에서는 디바이스 성능에 따라 다를듯)
+- 갤럭시노트9 기준 최초 로드시 5 ~ 6초, 앱 완전 종료 후 다시 실행시 2초이내 실행 확인 (디바이스에 따라서 처리 속도가 다를듯)
 
 </br></br></br>
 ***
